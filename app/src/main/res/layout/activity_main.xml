@@ -1,4 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="fill_parent"
+    android:layout_width="fill_parent" >
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
@@ -170,12 +173,16 @@
                 android:textSize="20sp"/>
         </LinearLayout>
     </LinearLayout>
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
     <TextView
         android:layout_marginTop="12dp"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="#ffff"
-
+        android:textSize="20sp"
         android:text="줄거리\n
 군도, 백성을 구하라
 양반과 탐관오리들의 착취가 극에 달했던 조선 철종 13년.
@@ -194,7 +201,20 @@
 뭉치면 백성, 흩어지면 도적!
 망할 세상을 뒤집기 위해, 백성이 주인인 새 세상을 향해
 도치를 필두로 한 군도는 백성의 적, 조윤과 한 판 승부를
-시작하는데..."
-        android:textSize="20sp"/>
+시작하는데..."/>
+    </LinearLayout>
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_marginTop="12dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#ffff"
+            android:textSize="20sp"
+            android:text="한 줄평\n\n\n\n\n\n 이 부분에 이미지와 완료 버튼"/>
+    </LinearLayout>
 </LinearLayout>
 
+</ScrollView>
