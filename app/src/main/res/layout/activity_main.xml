@@ -213,7 +213,7 @@
             android:layout_height="match_parent"
             android:background="#ffff"
             android:textSize="20sp"
-            android:text="한 줄평\n\n\n\n\n\n"/>
+            android:text="한 줄평\n\n\n\n\n\n 이 부분에 이미지와 완료 버튼"/>
     </LinearLayout>
 </LinearLayout>
 
