@@ -131,7 +131,11 @@
             android:layout_width="match_parent"
             android:layout_weight="1"
             android:layout_height="match_parent"
-            android:orientation="horizontal">
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="5">
             <TextView
                 android:layout_marginTop="9dp"
                 android:layout_width="match_parent"
@@ -139,38 +143,112 @@
                 android:background="#ffff"
                 android:layout_gravity="center_vertical"
                 android:gravity="center"
-                android:text="예매율\n5위 1.8%"
+                android:text="예매율"
                 android:textSize="20sp"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="5">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#ffff"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center"
+                    android:text="5위 1.8%" />
+            </LinearLayout>
         </LinearLayout>
         <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
             android:layout_width="match_parent"
             android:layout_weight="1"
             android:layout_height="match_parent"
-            android:orientation="horizontal">
-            <TextView
-                android:layout_marginTop="9dp"
+            android:orientation="vertical"
+            android:background="#ffff">
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="#ffff"
-                android:layout_gravity="center_vertical"
-                android:gravity="center"
-                android:text="평점\n***** 8.2"
-                android:textSize="20sp"/>
+                android:layout_weight="5">
+                <TextView
+                    android:layout_marginTop="9dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center"
+                    android:text="평점"
+                    android:textSize="20sp"
+                    />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="5"
+                android:gravity="center_vertical">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+                <RatingBar
+                    android:id="@+id/ratingBar1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:isIndicator="false"
+                    android:max="6"
+                    android:numStars="5"
+                    android:rating="3"
+                    android:stepSize="0.5"
+                    style="?android:attr/ratingBarStyleSmall"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="5"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/ratingtv"
+                        android:text="3.0"
+                        android:gravity="center_vertical"/>
+                </LinearLayout>
+            </LinearLayout>
+
         </LinearLayout>
         <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
             android:layout_width="match_parent"
             android:layout_weight="1"
             android:layout_height="match_parent"
-            android:orientation="horizontal">
-            <TextView
-                android:layout_marginTop="9dp"
+            android:orientation="vertical">
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="#ffff"
-                android:layout_gravity="center_vertical"
-                android:gravity="center"
-                android:text="누적관객수\n839,399명"
-                android:textSize="20sp"/>
+                android:layout_weight="5">
+                <TextView
+                    android:layout_marginTop="9dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#ffff"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center"
+                    android:text="누적관객수"
+                    android:textSize="20sp"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="5">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#ffff"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center"
+                    android:text="839,399명"
+                    android:textSize="20sp"/>
+            </LinearLayout>
         </LinearLayout>
     </LinearLayout>
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -213,7 +291,80 @@
             android:layout_height="match_parent"
             android:background="#ffff"
             android:textSize="20sp"
-            android:text="한 줄평\n\n\n\n\n\n 이 부분에 이미지와 완료 버튼"/>
+            android:text="감독/출연\n감독 윤종빈\n출연 하정우(도치), 강동원(조윤)"/>
+    </LinearLayout>
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginTop="12dp"
+        android:background="#ffff">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="2">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="한 줄평"
+                    android:gravity="center_vertical"
+                    android:textSize="20sp"
+                    android:textStyle="bold"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="5">
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/ic_review_selected"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="4.5">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="작성하기"
+                    android:textColor="#ff7f00"
+                    android:textSize="18sp"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center"/>
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="이곳은\n\n\n\n\n한줄평 작성공간"
+                android:textColor="#ff7f00"
+                android:textSize="18sp"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <Button
+                android:layout_width="350dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:text="모두 보기"/>
+        </LinearLayout>
+
     </LinearLayout>
 </LinearLayout>
 
