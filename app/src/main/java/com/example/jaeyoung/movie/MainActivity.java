@@ -28,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
         });
     }
     // 이미지 클릭 시 이벤트 처리 추가
-
+    //
     public void onButtonClicked(View v) {
         Toast.makeText(getApplicationContext(), "버튼이 눌렸습니다." , Toast.LENGTH_LONG).show();
     }
