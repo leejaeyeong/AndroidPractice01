@@ -5,10 +5,16 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.ImageView;
+import android.widget.ListAdapter;
+import android.widget.ListView;
 import android.widget.RatingBar;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -21,6 +27,34 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        String item[] = { "안녕1" , "안녕2", "안녕3" };
+        ListAdapter adapter = new ArrayAdapter<String> (this,android.R.layout.simple_list_item_1,item);
+        ListView listview = findViewById(R.id.listview);
+        listview.setAdapter(adapter);
+
+
+
+
+
+        listview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView,
+                                    View view, int position, long id) {
+
+                // 8. 클릭한 아이템의 문자열을 가져와서
+                String selected_item = (String)adapterView.getItemAtPosition(position);
+
+                // 9. 해당 아이템을 ArrayList 객체에서 제거하고
+              // list.remove(selected_item);
+
+                // 10. 어댑터 객체에 변경 내용을 반영시켜줘야 에러가 발생하지 않습니다.
+                //adapter.notifyDataSetChanged();
+            }
+        });
+
+
+
 
         final TextView ratingScoreTextView = findViewById(R.id.ratingtv);
         RatingBar rb = findViewById(R.id.ratingBar1);

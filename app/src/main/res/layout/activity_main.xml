@@ -173,7 +173,6 @@
                     android:layout_marginTop="9dp"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-
                     android:layout_gravity="center_vertical"
                     android:gravity="center"
                     android:text="평점"
@@ -251,17 +250,18 @@
             </LinearLayout>
         </LinearLayout>
     </LinearLayout>
+
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="horizontal">
-    <TextView
-        android:layout_marginTop="12dp"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="#ffff"
-        android:textSize="20sp"
-        android:text="줄거리\n
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="12dp"
+            android:background="#ffff"
+            android:text="줄거리\n
 군도, 백성을 구하라
 양반과 탐관오리들의 착취가 극에 달했던 조선 철종 13년.
 힘 없는 백성의 편이 되어 세상을 바로잡고자 하는 의적떼인
@@ -279,7 +279,8 @@
 뭉치면 백성, 흩어지면 도적!
 망할 세상을 뒤집기 위해, 백성이 주인인 새 세상을 향해
 도치를 필두로 한 군도는 백성의 적, 조윤과 한 판 승부를
-시작하는데..."/>
+시작하는데..."
+            android:textSize="20sp" />
     </LinearLayout>
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
@@ -293,49 +294,57 @@
             android:textSize="20sp"
             android:text="감독/출연\n감독 윤종빈\n출연 하정우(도치), 강동원(조윤)"/>
     </LinearLayout>
+
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
         android:layout_marginTop="12dp"
-        android:background="#ffff">
+        android:background="#ffff"
+        android:orientation="vertical">
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="horizontal">
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="2">
+
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:text="한 줄평"
                     android:gravity="center_vertical"
+                    android:text="한 줄평"
                     android:textSize="20sp"
-                    android:textStyle="bold"/>
+                    android:textStyle="bold" />
             </LinearLayout>
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="5">
+
                 <ImageView
                     android:layout_width="50dp"
                     android:layout_height="50dp"
-                    android:src="@drawable/ic_review_selected"/>
+                    android:src="@drawable/ic_review_selected" />
             </LinearLayout>
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="4.5">
+
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center"
                     android:text="작성하기"
                     android:textColor="#ff7f00"
-                    android:textSize="18sp"
-                    android:layout_gravity="center_horizontal"
-                    android:gravity="center"/>
+                    android:textSize="18sp" />
             </LinearLayout>
 
 
@@ -345,15 +354,15 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical">
-            <TextView
+
+            <ListView
+                android:id="@+id/listview"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:text="이곳은\n\n\n\n\n한줄평 작성공간"
-                android:textColor="#ff7f00"
-                android:textSize="18sp"
-                android:layout_gravity="center_horizontal"
-                android:gravity="center"/>
+                android:layout_height="200dp" />
         </LinearLayout>
+
+
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -363,9 +372,42 @@
                 android:layout_width="350dp"
                 android:layout_height="40dp"
                 android:layout_gravity="center"
-                android:text="모두 보기" />
+                android:background="@drawable/edge"
+                android:text="모두 보기"
+                android:textColor="#ff33ff"
+                android:textStyle="bold" />
         </LinearLayout>
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="15dp"
+            android:layout_marginTop="15dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="65dp"
+                android:layout_height="65dp"
+                android:layout_marginLeft="15dp"
+                android:src="@drawable/ic_facebook" />
+
+            <ImageView
+                android:layout_width="65dp"
+                android:layout_height="65dp"
+                android:layout_marginLeft="15dp"
+                android:src="@drawable/ic_kakao" />
+
+            <Button
+                android:layout_width="212dp"
+                android:layout_height="70dp"
+                android:layout_marginLeft="15dp"
+                android:background="#ff7f00"
+                android:text="예매하기"
+                android:textColor="#ffff"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
     </LinearLayout>
 </LinearLayout>
 
