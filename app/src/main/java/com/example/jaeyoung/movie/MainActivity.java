@@ -30,6 +30,7 @@ public class MainActivity extends AppCompatActivity {
 
         String item[] = { "안녕1" , "안녕2", "안녕3" };
         ListAdapter adapter = new ArrayAdapter<String> (this,android.R.layout.simple_list_item_1,item);
+        //ListAdapter adapter = new ArrayAdapter<String> (this,R.layout.items,item);
         ListView listview = findViewById(R.id.listview);
         listview.setAdapter(adapter);
 
